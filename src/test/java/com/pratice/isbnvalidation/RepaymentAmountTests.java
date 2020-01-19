@@ -1,36 +1,23 @@
 package com.pratice.isbnvalidation;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.math.BigDecimal;
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.Spy;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.web.client.RestTemplate;
-
-import static org.mockito.Mockito.*;
-
-
 class RepaymentAmountTests {
 
-	@Test
-	public void test1YearLoanWholePounds() {
-
-		// spy declare
-		LoanApplication loanApplication = spy(new LoanApplication());
-
-		// use defined method
-		loanApplication.setPrincipal(1200);
-		loanApplication.setTermInMonths(12);
-
-		// use spy
-		doReturn(new BigDecimal(10)).when(loanApplication).getInterestRate();
-
-		// assert
-		assertEquals(new BigDecimal(110), loanApplication.getRepayment());
-	}
+//	@Test
+//	public void test1YearLoanWholePounds() {
+//
+//		// spy declare
+//		LoanApplication loanApplication = spy(new LoanApplication());
+//
+//		// use defined method
+//		loanApplication.setPrincipal(1200);
+//		loanApplication.setTermInMonths(12);
+//
+//		// use spy
+//		doReturn(new BigDecimal(10)).when(loanApplication).getInterestRate();
+//
+//		// assert
+//		assertEquals(new BigDecimal(110), loanApplication.getRepayment());
+//	}
 	
 //	@Test
 //	public void test2YearLoanWholePounds() {
